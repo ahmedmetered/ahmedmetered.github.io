@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Metered · Developer in Milan</title>
+<meta name="description" content="Ahmed Metered: Milan-based developer. Two live products, a CRM sold as a managed service, and five public open-source repos, all built with AI coding agents.">
+<meta name="theme-color" content="#0b0b0d">
+<meta property="og:title" content="Ahmed Metered · Developer in Milan">
+<meta property="og:description" content="Two live products, a managed-service CRM, and five public open-source repos, built with AI coding agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0b0b0d; --panel:#131316; --border:#27272b; --border-hi:#3d3d44;
+  --text:#f2f2f3; --muted:#a4a4ae; --dim:#7e7e88; --accent:#d6a955; --accent-soft:rgba(214,169,85,.12);
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 22px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.top{position:sticky;top:0;z-index:10;background:rgba(11,11,13,.84);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0}
+.who{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13.5px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:#3fb950;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+nav{display:flex;gap:20px;font-family:var(--mono);font-size:12.5px}
+nav a{color:var(--muted)}
+nav a:hover{color:var(--text);text-decoration:none}
+@media(max-width:600px){nav{display:none}}
+
+.hero{padding:64px 0 6px}
+h1{font-size:clamp(30px,5vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.loc{margin-top:8px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.bio{margin-top:18px;max-width:660px;color:var(--muted);font-size:17px}
+.links{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:8px;font-family:var(--mono);font-size:13px;color:var(--text);background:var(--panel)}
+.btn:hover{border-color:var(--border-hi);text-decoration:none}
+.btn.gold{background:var(--accent);border-color:var(--accent);color:#181205;font-weight:600}
+.btn.gold:hover{filter:brightness(1.08)}
+
+section{padding:54px 0 0}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.label::before{content:'# ';color:var(--dim)}
+
+.card{margin-top:16px;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:22px 24px;transition:border-color .15s}
+.card:hover{border-color:var(--border-hi)}
+.card-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 14px}
+.card h3{font-size:19px;font-weight:700;letter-spacing:-.01em}
+.tag{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.tag.live{color:var(--accent);border-color:rgba(214,169,85,.45);background:var(--accent-soft)}
+a.tag:hover{text-decoration:none;border-color:var(--accent)}
+.desc{margin-top:10px;color:var(--muted);font-size:15px}
+.stack{margin-top:12px;font-family:var(--mono);font-size:12.5px;color:var(--dim)}
+
+.repo{display:block;margin-top:12px;padding:16px 20px;background:var(--panel);border:1px solid var(--border);border-radius:12px;color:inherit;transition:border-color .15s}
+.repo:hover{border-color:var(--border-hi);text-decoration:none}
+.repo-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.repo h3{font-family:var(--mono);font-size:15.5px;font-weight:600;color:var(--text)}
+.repo .gh{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.repo p{margin-top:6px;color:var(--muted);font-size:14.5px}
+
+.bg-grid{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:680px){.bg-grid{grid-template-columns:1fr}}
+.bg-col{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px 22px}
+.bg-col h3{font-size:12.5px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:14px}
+.item{padding:12px 0;border-top:1px solid var(--border)}
+.item:first-of-type{border-top:none;padding-top:0}
+.when{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.role{font-weight:600;font-size:15px;margin-top:3px}
+.where{color:var(--accent);font-size:13.5px}
+.item p+.role{margin-top:4px}
+.item .note{color:var(--muted);font-size:13.5px;margin-top:4px}
+
+footer{margin-top:64px;border-top:1px solid var(--border);padding:30px 0 46px}
+.cta{font-size:15.5px;color:var(--muted);max-width:660px}
+.fine{margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--dim)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <div class="who"><span class="dot"></span> ahmed.metered</div>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#oss">Open source</a>
+      <a href="#background">Background</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <h1>Ahmed Metered</h1>
+    <p class="loc">Milan, Italy · CET · remote-friendly</p>
+    <p class="bio">I build and ship working software with AI coding agents. Two products are live, a third is being sold as a managed service, and the reusable parts are published as open source. Before this I spent nearly three years in quality assurance on an airline account, which is where the testing habit comes from.</p>
+    <div class="links">
+      <a class="btn gold" target="_blank" rel="noopener" href="https://github.com/ahmedmetered">github.com/ahmedmetered</a>
+      <a class="btn" href="mailto:ahmedmetered@icloud.com">ahmedmetered@icloud.com</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/ahmedmetered/">LinkedIn</a>
+    </div>
+  </div>
+
+  <section id="products">
+    <p class="label">Products</p>
+
+    <article class="card">
+      <div class="card-head"><h3>SpecWatch</h3><a class="tag live" target="_blank" rel="noopener" href="https://specwatch.me">live · specwatch.me</a></div>
+      <p class="desc">Watches suppliers' public product pages and reports what changed: price moves, spec values that quietly shift, datasheet links that die. Word-level diffs, daily digest or instant change-alert email, PDF reports, and Stripe subscriptions with four self-serve tiers. The backend is dependency-free Node running on a single Azure VM.</p>
+      <p class="stack">Node.js (zero-dependency API) · node:sqlite · Playwright · Vite · Stripe · SendGrid · Caddy + pm2 on Azure</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><h3>Roam Alone</h3><a class="tag live" target="_blank" rel="noopener" href="https://roamalone.app">live · roamalone.app</a></div>
+      <p class="desc">Paid, day-by-day Egypt itineraries for independent travellers. A request form, Stripe checkout, and a full multi-city plan delivered with revisions. I run the whole loop myself: the site, the commerce flow, and the content.</p>
+      <p class="stack">Next.js · Stripe</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><h3>Cohorta</h3><span class="tag">private repo</span></div>
+      <p class="desc">A self-hosted CRM for cohort-based course academies: leads and follow-up cadences, enrolments by cohort, finance and forecasting, client portals. Bilingual English/Italian with a CI gate that fails the build on a missing translation. 587 unit tests and 19 end-to-end tests. Currently being sold as a managed service to training academies in Milan.</p>
+      <p class="stack">Next.js 15 · React 19 · PostgreSQL 16 · Drizzle · Docker Compose · Caddy</p>
+    </article>
+  </section>
+
+  <section id="oss">
+    <p class="label">Open source · github.com/ahmedmetered</p>
+
+    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/prospect-sweep">
+      <div class="repo-head"><h3>prospect-sweep</h3><span class="gh">Node.js · Docker · Playwright</span></div>
+      <p>Locality-sweep lead generation. Plans per-municipality search grids for any city, dedupes by Google place ID, filters categories before ranking so big-box stores stop polluting the list, and pulls social links from each business's own website. Validated on a real 1,517-row Milan crawl.</p>
+    </a>
+
+    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyoutreach">
+      <div class="repo-head"><h3>anyoutreach</h3><span class="gh">Agent skills · MIT</span></div>
+      <p>An agent-native cold outreach pack. Turns terminal coding agents (ZCode, Claude Code, Codex) into an approval-first outreach workflow: it drafts, you approve, nothing sends without you. Plain-text state, no API keys.</p>
+    </a>
+
+    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/i18n-keycheck">
+      <div class="repo-head"><h3>i18n-keycheck</h3><span class="gh">Node.js · node:fs only</span></div>
+      <p>A single-file CI gate for hand-rolled i18n: fails the build when a key used in code is missing from a dictionary file, including dynamic template prefixes. Zero npm dependencies. Validated against a real 2,991-key bilingual codebase.</p>
+    </a>
+
+    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/qa-automation-portfolio">
+      <div class="repo-head"><h3>qa-automation-portfolio</h3><span class="gh">Playwright · TypeScript · GitHub Actions</span></div>
+      <p>Test suite with a page-object model: 7 UI tests, 9 API contract tests, and 3 axe-core accessibility scans, all green in GitHub Actions CI.</p>
+    </a>
+
+    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/cvhtml2doc">
+      <div class="repo-head"><h3>cvhtml2doc</h3><span class="gh">Python · Node · headless Edge</span></div>
+      <p>A pipeline for pixel-matching CVs: extract design tokens from a reference PDF, render HTML to PDF headlessly, audit the layout numerically, and emit an editable DOCX with embedded fonts.</p>
+    </a>
+  </section>
+
+  <section id="hackathon">
+    <p class="label">Hackathon</p>
+    <article class="card">
+      <div class="card-head"><h3>Interrogami</h3><a class="tag" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/interrogami">repo · built with Lovable</a></div>
+      <p class="desc">A gamified oral-exam trainer built at the Learning Reimagined Hackathon (Albert School Milano, October 2026) from my product spec. It speaks exam questions out loud, listens to the answer through the microphone, grades on the Italian 0-30 scale, and the study map moves the academic calendar forward when you fail, snow melting into spring rain.</p>
+      <p class="stack">React · Web Speech API (STT + TTS) · Lovable</p>
+    </article>
+  </section>
+
+  <section id="background">
+    <p class="label">Background</p>
+    <div class="bg-grid">
+      <div class="bg-col">
+        <h3>Work</h3>
+        <div class="item">
+          <p class="when">2022-2026 · Cairo</p>
+          <p class="role">Quality Assurance Analyst, airline account</p>
+          <p class="where">Sutherland Global Services</p>
+          <p class="note">Started as an airline reservations agent on Amadeus, moved into virtual QA, then promoted to QA Lead, running multi-channel quality checks and root-cause analysis on service exceptions.</p>
+        </div>
+        <div class="item">
+          <p class="when">2024 · Cairo</p>
+          <p class="role">Hybrid and EV Powertrain Intern</p>
+          <p class="where">Awija Auto</p>
+          <p class="note">High-voltage battery diagnostics and drivetrain testing in a working workshop.</p>
+        </div>
+        <div class="item">
+          <p class="when">Training</p>
+          <p class="note">Engineering Products Inspection and Testing Methods, Egyptian Organization for Standardization (2024) · Engineering Project Management, The British University in Egypt (2024)</p>
+        </div>
+      </div>
+      <div class="bg-col">
+        <h3>Education</h3>
+        <div class="item">
+          <p class="when">2026-2028 · in progress</p>
+          <p class="role">MSc Mechanical Engineering, Automotive and Motorsport track</p>
+          <p class="where">Politecnico di Milano</p>
+        </div>
+        <div class="item">
+          <p class="when">2021-2025</p>
+          <p class="role">BSc Automotive Mechatronics</p>
+          <p class="where">Helwan University, Cairo (renamed Capital University)</p>
+          <p class="note">Thesis: fleet telemetry tracking over OBD-II and GPS, graded 91/110.</p>
+        </div>
+        <div class="item">
+          <p class="when">Certifications</p>
+          <p class="note">Data Analysis with Python · Data Visualization with Python · Applied Data Science Specialization · Python for Data Science and AI · Intro to Programming NanoDegree</p>
+        </div>
+        <div class="item">
+          <p class="when">Languages</p>
+          <p class="note">English C1 · Italian A2 · Arabic native</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="cta">Open to remote roles and contract work in automation, QA automation, and AI-assisted development. The fastest way to reach me is <a href="mailto:ahmedmetered@icloud.com">email</a>.</p>
+    <p class="fine">Last updated October 2026 · Milan, Italy</p>
+  </div>
+</footer>
+
+</body>
+</html>
