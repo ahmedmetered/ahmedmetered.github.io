@@ -51,8 +51,33 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 
-.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--hairline)}
-.top-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+/* Liquid Glass — floating functional layer (the only glass surface on the page).
+   Regular variant: ~70% fill + 28px blur + saturation boost; specular hairline;
+   scroll-edge handled by the blur itself as content passes beneath. */
+.top{position:sticky;top:12px;z-index:10;display:flex;justify-content:center;padding:0 20px;pointer-events:none}
+.top-in{
+  pointer-events:auto;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  width:100%;max-width:880px;padding:10px 22px;
+  border-radius:980px;
+  background:color-mix(in srgb,var(--surface) 72%,transparent);
+  -webkit-backdrop-filter:blur(28px) saturate(1.4);
+  backdrop-filter:blur(28px) saturate(1.4);
+  border:1px solid color-mix(in srgb,var(--hairline-strong) 65%,transparent);
+  box-shadow:0 8px 28px rgba(0,0,0,.07), inset 0 1px 0 rgba(255,255,255,.55);
+}
+[data-theme="dark"] .top-in{
+  background:color-mix(in srgb,var(--surface) 68%,transparent);
+  border-color:color-mix(in srgb,var(--hairline-strong) 80%,transparent);
+  box-shadow:0 8px 28px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.08);
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .top-in{background:var(--surface)}
+}
+@media (prefers-reduced-transparency:reduce){
+  .top-in{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 8px 28px rgba(0,0,0,.07)}
+  [data-theme="dark"] .top-in{box-shadow:0 8px 28px rgba(0,0,0,.45)}
+}
 .who{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:var(--ink)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--live);animation:pulse 2.4s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
@@ -67,7 +92,7 @@ nav a:hover{color:var(--ink);text-decoration:none}
 [data-theme="light"] .icon-sun{display:none}
 [data-theme="dark"] .icon-moon{display:none}
 
-.hero{padding:68px 0 8px}
+.hero{padding:42px 0 8px}
 h1{font-size:clamp(32px,5vw,44px);font-weight:700;letter-spacing:-.024em;line-height:1.12}
 .loc{margin-top:9px;font-size:14px;color:var(--muted)}
 .bio{margin-top:18px;max-width:660px;color:var(--muted);font-size:17px}
