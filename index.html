@@ -109,6 +109,7 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.018em}
 
 .card{margin-top:14px;background:var(--surface);border-radius:14px;padding:22px 24px}
 .card-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 14px}
+.card-tags{display:inline-flex;gap:6px;flex-wrap:wrap}
 .card h3{font-size:19px;font-weight:700;letter-spacing:-.012em}
 .tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--muted);background:var(--track);border-radius:999px;padding:3px 10px;white-space:nowrap}
 .tag.live{color:var(--live);background:var(--live-soft)}
@@ -149,6 +150,7 @@ footer{margin-top:64px;border-top:1px solid var(--hairline);padding:30px 0 46px}
     <div class="top-right">
       <nav>
         <a href="#products">Products</a>
+        <a href="#guides">Guides</a>
         <a href="#oss">Open source</a>
         <a href="#background">Background</a>
       </nav>
@@ -199,7 +201,7 @@ footer{margin-top:64px;border-top:1px solid var(--hairline);padding:30px 0 46px}
     <h2>Guides</h2>
 
     <article class="card">
-      <div class="card-head"><h3>Milan Study Spots</h3><a class="tag live" target="_blank" rel="noopener" href="https://milanstudyspots.lovable.app/"><span class="dot"></span>live · milanstudyspots.lovable.app</a></div>
+      <div class="card-head"><h3>Milan Study Spots</h3><span class="card-tags"><a class="tag live" target="_blank" rel="noopener" href="https://milanstudyspots.lovable.app/"><span class="dot"></span>live · milanstudyspots.lovable.app</a><a class="tag" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/milanstudyspots">repo</a></span></div>
       <p class="desc">A curated guide to the libraries, cafés and study rooms in Milan worth a four-hour block: ten spots, filters by type, neighborhood and traits, and a page per spot with hours, noise level, price band and one insider tip. Built with Lovable from my brief and my shortlist of spots.</p>
       <p class="stack">React · Vite · Tailwind · Lovable</p>
     </article>
