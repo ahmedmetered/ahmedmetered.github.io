@@ -81,6 +81,7 @@ nav a:hover{color:var(--bar-ink);text-decoration:none;border-bottom-color:curren
 #theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;background:transparent;border:none;color:color-mix(in srgb,var(--bar-ink) 66%,transparent);cursor:pointer;border-radius:50%;transition:color .2s ease,background-color .2s ease}
 #theme-toggle:hover{color:var(--bar-ink);background:color-mix(in srgb,var(--bar-ink) 10%,transparent)}
 #theme-toggle .i{width:17px;height:17px}
+@media(pointer:coarse){#theme-toggle{width:44px;height:44px}.who{padding:6px 0}}
 [data-theme="light"] .icon-sun{display:none}
 [data-theme="dark"] .icon-moon{display:none}
 .progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--accent);z-index:40}
@@ -98,7 +99,7 @@ h1 .static{display:block;white-space:nowrap}
 @media(max-width:560px){h1 .static{white-space:normal}}
 .roll{display:grid;margin-top:.04em;color:var(--acc);transition:color .6s ease}
 .roll-item{grid-area:1/1;white-space:nowrap;transform:translateY(105%);opacity:0;transition:transform .8s var(--ease),opacity .5s ease}
-.roll-viewport{overflow:hidden;padding-bottom:.12em}
+.roll-viewport{display:block;overflow:hidden;padding-bottom:.12em}
 .roll-item.on{transform:none;opacity:1}
 .roll-item.past{transform:translateY(-105%);opacity:0}
 .js .hero h1 .static span{display:inline-block;animation:rise .9s var(--ease) both}
@@ -111,6 +112,8 @@ h1 .static{display:block;white-space:nowrap}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;font-size:14px;font-weight:600;color:var(--ink);background:color-mix(in srgb,var(--ink) 8%,transparent);border:1px solid color-mix(in srgb,var(--ink) 16%,transparent);transition:background .2s ease,transform .25s var(--ease)}
 .btn:hover{background:color-mix(in srgb,var(--ink) 16%,transparent);text-decoration:none;transform:translateY(-1px)}
 .btn.icon{width:42px;height:42px;padding:0;justify-content:center}
+.links .br{display:none}
+@media(max-width:480px){.links .br{display:block;flex-basis:100%;height:0}.links .btn:not(.icon){flex:1 1 calc(50% - 5px);justify-content:center}}
 .btn .fill{width:20px;height:20px;fill:currentColor;stroke:none}
 .btn .i{width:20px;height:20px}
 .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg);font-weight:600}
@@ -167,7 +170,7 @@ h1 .static{display:block;white-space:nowrap}
 .live .badge b{width:8px;height:8px;border-radius:50%;background:#30D158}
 .mock[data-stage="4"] .live .badge{opacity:1;transform:none}
 .rail{margin-top:22px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;position:relative}
-.rail button{all:unset;cursor:pointer;font:600 13px/1 var(--display);letter-spacing:.01em;color:var(--dim);padding:12px 0 0;border-top:3px solid var(--hairline-strong);transition:color .3s ease,border-color .3s ease}
+.rail button{all:unset;cursor:pointer;font:600 13px/1 var(--display);letter-spacing:.01em;color:var(--dim);padding:12px 0 14px;border-top:3px solid var(--hairline-strong);transition:color .3s ease,border-color .3s ease}
 .rail button:hover{color:var(--ink)}
 .rail button.done{border-top-color:var(--acc);color:var(--muted)}
 .rail button.cur{border-top-color:var(--acc);color:var(--ink)}
@@ -179,7 +182,8 @@ h1 .static{display:block;white-space:nowrap}
 .band-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:clamp(32px,5vw,72px);row-gap:44px;align-items:start;margin-top:clamp(28px,4vw,48px)}
 .band.flip .band-in{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
 .band.flip .band-copy{order:2}
-@media(max-width:940px){.band-in,.band.flip .band-in{grid-template-columns:1fr}.band.flip .band-copy{order:0}}
+@media(max-width:940px){.band-in,.band.flip .band-in{grid-template-columns:minmax(0,1fr)}.band.flip .band-copy{order:0}}
+.band-in>*{min-width:0}
 .band-lead{font-family:var(--display);font-size:clamp(22px,2.3vw,30px);line-height:1.2;letter-spacing:-.02em;font-weight:560;color:var(--b-ink);text-wrap:balance}
 .band-body{margin-top:18px;color:var(--b-mute);font-size:16.5px;line-height:1.62;max-width:58ch}
 .band-stack{margin-top:22px;font-size:13px;color:var(--b-mute);opacity:.92;line-height:1.5}
@@ -216,6 +220,7 @@ a.frame-link:hover img{filter:brightness(1.04)}
 .js [data-enter="words"] .band-title .w>span{display:inline-block;transform:translateY(105%) rotate(4deg);transform-origin:0 100%;transition:transform .9s var(--ease);transition-delay:calc(var(--w)*110ms)}
 .js [data-enter="words"].in .band-title .w>span{transform:none}
 .js [data-enter].in .band-title{visibility:visible}
+@media(max-width:940px){.frame{transform:translate3d(0,calc((.5 - var(--p))*30px),0) rotate(calc((var(--p) - .5)*-1deg))}.band{padding-bottom:clamp(112px,16vw,150px)}}
 .js .fade{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform 1s var(--ease)}
 .js .in .fade{opacity:1;transform:none}
 .js .in .fade.d1{transition-delay:.15s}.js .in .fade.d2{transition-delay:.3s}.js .in .fade.d3{transition-delay:.45s}
@@ -233,10 +238,13 @@ a.frame-link:hover img{filter:brightness(1.04)}
 .base{position:relative;margin-top:-40px;border-radius:40px 40px 0 0;background:var(--bg);padding:clamp(80px,10vw,130px) 0 0;--b-ink:var(--ink);--b-mute:var(--muted);--b-w:700;--b-s:90%}
 .base .band-title{margin-bottom:0}
 /* open source, in the same band language */
+.oss .frame{transform:none;will-change:auto}
 .oss-intro{margin-top:18px;max-width:46ch;font-size:clamp(18px,1.6vw,21px);font-weight:500;line-height:1.45;color:var(--b-mute)}
 .oss-grid{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto 1fr auto;column-gap:clamp(36px,5vw,72px);row-gap:0}
-@media(max-width:860px){.oss-grid{grid-template-columns:1fr}}
-.oss-item{display:grid;grid-row:span 5;grid-template-rows:subgrid}
+@media(max-width:860px){.oss-grid{grid-template-columns:minmax(0,1fr)}.oss-item{margin-bottom:clamp(48px,10vw,72px)}.oss-item:last-child{margin-bottom:0}}
+.oss-grid>*{min-width:0}
+.oss-item{display:grid;grid-row:span 5;grid-template-rows:subgrid;grid-template-columns:minmax(0,1fr)}
+.oss-item>*{min-width:0}
 .oss-item h3{margin-top:30px;font-family:var(--display);font-size:clamp(30px,3.4vw,44px);line-height:1;font-weight:700;font-stretch:90%;letter-spacing:-.032em;color:var(--b-ink)}
 .oss-item .band-lead{margin-top:14px}
 .oss-list{margin-top:clamp(56px,7vw,96px);border-top:1px solid color-mix(in srgb,var(--b-ink) 18%,transparent)}
@@ -249,7 +257,7 @@ a.frame-link:hover img{filter:brightness(1.04)}
 .oss-more{margin-top:32px}
 
 .bg-grid{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(28px,5vw,72px);row-gap:clamp(28px,3.5vw,44px);align-items:start}
-@media(max-width:760px){.bg-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.bg-grid{grid-template-columns:minmax(0,1fr)}}
 .bg-col{border-top:1px solid color-mix(in srgb,var(--ink) 16%,transparent);padding-top:22px}
 .bg-skills{margin-top:clamp(36px,4.5vw,56px);border-top:1px solid color-mix(in srgb,var(--ink) 16%,transparent);padding-top:22px}
 .bg-skills h3{font-family:var(--display);font-size:clamp(22px,2.3vw,30px);line-height:1.2;font-weight:560;letter-spacing:-.025em;color:var(--ink);margin-bottom:18px}
@@ -349,6 +357,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
           <a class="btn primary icon" href="mailto:ahmedmetered@icloud.com" aria-label="Email Ahmed" title="Email"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg></a>
           <a class="btn icon" target="_blank" rel="noopener" href="https://github.com/ahmedmetered" aria-label="GitHub" title="GitHub"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gh"/></svg></a>
           <a class="btn icon" target="_blank" rel="noopener" href="https://www.linkedin.com/in/ahmedmetered/" aria-label="LinkedIn" title="LinkedIn"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-li"/></svg></a>
+          <span class="br" aria-hidden="true"></span>
           <a class="btn" target="_blank" rel="noopener" href="cv/CV_Ahmed_Metered_Product_EN.pdf">CV · EN</a>
           <a class="btn" target="_blank" rel="noopener" href="cv/CV_Ahmed_Metered_Product_IT.pdf">CV · IT</a>
         </div>
