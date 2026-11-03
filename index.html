@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ahmed Metered · Developer in Milan</title>
-<meta name="description" content="Two live products, a managed-service CRM, and a suite of open-source tools, all built and shipped with AI. Developer and QA analyst in Milan.">
+<title>Ahmed Metered · Builds products with AI, Milan</title>
+<meta name="description" content="Live products, a managed-service CRM, and open-source tools, all built and shipped with AI. Product builder and QA analyst in Milan.">
 <script>
   // set appearance before first paint to avoid a flash
   (function(){
@@ -13,32 +13,34 @@
   })();
 </script>
 <meta name="theme-color" content="#F5F5F7">
-<meta property="og:title" content="Ahmed Metered · Developer in Milan">
-<meta property="og:description" content="Two live products, a managed-service CRM, and a suite of open-source tools, all built and shipped with AI.">
+<meta property="og:title" content="Ahmed Metered · Builds products with AI, Milan">
+<meta property="og:description" content="Live products, a managed-service CRM, and open-source tools, all built and shipped with AI.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ahmedmetered.github.io/">
 <meta property="og:image" content="https://ahmedmetered.github.io/og-image-3.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Ahmed Metered, developer and QA analyst in Milan">
+<meta property="og:image:alt" content="Ahmed Metered, product builder and QA analyst in Milan">
 <meta name="twitter:card" content="summary_large_image">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#F5F5F7; --surface:#FFFFFF; --surface-2:#FAFAFC;
-  --ink:#1D1D1F; --muted:#6E6E73; --dim:#86868B;
+  --ink:#1D1D1F; --muted:#6E6E73; --dim:#7A7A80;
   --hairline:#E3E3E8; --hairline-strong:#D2D2D7;
   --accent:#0071E3; --accent-press:#0060C0; --accent-soft:rgba(0,113,227,.09);
   --live:#1D7A36; --live-soft:#E6F4EA;
   --track:#E9E9EB;
+  --shadow:0 1px 2px rgba(0,0,0,.04), 0 10px 30px rgba(0,0,0,.07);
 }
 [data-theme="dark"]{
   --bg:#0A0A0C; --surface:#17171A; --surface-2:#1D1D21;
-  --ink:#F5F5F7; --muted:#A1A1A6; --dim:#8E8E93;
+  --ink:#F5F5F7; --muted:#A1A1A6; --dim:#9A9AA0;
   --hairline:#2A2A2E; --hairline-strong:#38383D;
   --accent:#0A84FF; --accent-press:#409CFF; --accent-soft:rgba(10,132,255,.16);
   --live:#30D158; --live-soft:rgba(48,209,88,.14);
   --track:#26262A;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.45);
 }
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
@@ -47,18 +49,16 @@ body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSys
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
 ::-webkit-scrollbar{width:11px}
 ::-webkit-scrollbar-thumb{background:var(--hairline-strong);border-radius:6px;border:3px solid var(--bg)}
-.wrap{max-width:880px;margin:0 auto;padding:0 22px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 
-/* Liquid Glass — floating functional layer (the only glass surface on the page).
-   Regular variant: ~70% fill + 28px blur + saturation boost; specular hairline;
-   scroll-edge handled by the blur itself as content passes beneath. */
+/* Liquid Glass: floating functional layer, the only glass surface on the page. */
 .top{position:sticky;top:12px;z-index:10;display:flex;justify-content:center;padding:0 20px;pointer-events:none}
 .top-in{
   pointer-events:auto;
   display:flex;align-items:center;justify-content:space-between;gap:12px;
-  width:100%;max-width:880px;padding:10px 22px;
+  width:100%;max-width:1040px;padding:10px 22px;
   border-radius:980px;
   background:color-mix(in srgb,var(--surface) 55%,transparent);
   -webkit-backdrop-filter:blur(32px) saturate(1.4);
@@ -86,31 +86,39 @@ nav{display:flex;gap:20px;font-size:13.5px;font-weight:500}
 nav a{color:var(--muted)}
 nav a:hover{color:var(--ink);text-decoration:none}
 @media(max-width:640px){nav{display:none}}
-#theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;background:transparent;border:none;color:var(--muted)}
+#theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;background:transparent;border:none;color:var(--muted);cursor:pointer}
 #theme-toggle:hover{color:var(--ink);background:var(--track);border-radius:8px}
 #theme-toggle svg{width:17px;height:17px}
 [data-theme="light"] .icon-sun{display:none}
 [data-theme="dark"] .icon-moon{display:none}
 
-.hero{padding:42px 0 8px}
-h1{font-size:clamp(32px,5vw,44px);font-weight:700;letter-spacing:-.024em;line-height:1.12}
-.loc{margin-top:9px;font-size:14px;color:var(--muted)}
-.bio{margin-top:18px;max-width:660px;color:var(--muted);font-size:17px}
+.hero{padding:56px 0 8px}
+h1{font-size:clamp(36px,6vw,56px);font-weight:700;letter-spacing:-.03em;line-height:1.08}
+.loc{margin-top:12px;font-size:14px;color:var(--muted)}
+.bio{margin-top:20px;max-width:700px;color:var(--muted);font-size:18px}
 .bio b{color:var(--ink);font-weight:600}
-.links{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+.links{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
 .btn{display:inline-flex;align-items:center;padding:8px 16px;border-radius:980px;font-size:13.5px;font-weight:500;color:var(--ink);background:var(--surface);border:1px solid var(--hairline-strong);transition:border-color .15s ease,background .15s ease}
 .btn:hover{border-color:#B9B9C0;text-decoration:none;background:var(--surface-2)}
 [data-theme="dark"] .btn:hover{border-color:#4A4A50;background:var(--surface-2)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
 .btn.primary:hover{background:var(--accent-press);border-color:var(--accent-press)}
 
-section{padding:56px 0 0}
-h2{font-size:21px;font-weight:700;letter-spacing:-.018em}
+section{padding:72px 0 0}
+h2{font-size:24px;font-weight:700;letter-spacing:-.02em}
+.sub{margin-top:4px;color:var(--muted);font-size:15px}
 
-.card{margin-top:14px;background:var(--surface);border-radius:14px;padding:22px 24px}
+.shot{display:block;position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--hairline);background:var(--surface-2);box-shadow:var(--shadow);aspect-ratio:16/10}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+a.shot:hover{text-decoration:none}
+a.shot:hover img{transform:scale(1.025)}
+
+.card{background:var(--surface);border-radius:18px;padding:18px;display:flex;flex-direction:column}
+.card-body{padding:18px 6px 6px;flex:1;display:flex;flex-direction:column}
+.card-body .stack{margin-top:auto;padding-top:12px}
 .card-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 14px}
 .card-tags{display:inline-flex;gap:6px;flex-wrap:wrap}
-.card h3{font-size:19px;font-weight:700;letter-spacing:-.012em}
+.card h3{font-size:20px;font-weight:700;letter-spacing:-.014em}
 .tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--muted);background:var(--track);border-radius:999px;padding:3px 10px;white-space:nowrap}
 .tag.live{color:var(--live);background:var(--live-soft)}
 .tag .dot{width:6px;height:6px;background:var(--live)}
@@ -118,16 +126,33 @@ a.tag:hover{text-decoration:none;background:var(--accent-soft);color:var(--accen
 .desc{margin-top:10px;color:var(--muted);font-size:15px}
 .stack{margin-top:12px;font-size:12.5px;color:var(--dim)}
 
-.repo{display:block;margin-top:10px;background:var(--surface);border-radius:14px;color:inherit;padding:17px 20px;transition:background .15s ease}
-.repo:hover{background:var(--surface-2);text-decoration:none}
-.repo-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-.repo h3{font-size:15.5px;font-weight:600;letter-spacing:-.01em}
-.repo .gh{font-size:12px;color:var(--dim)}
-.repo p{margin-top:6px;color:var(--muted);font-size:14.5px}
+.feature{margin-top:24px;display:grid;grid-template-columns:1.35fr 1fr;gap:28px;align-items:center;flex-direction:row}
+.feature .card-body{padding:10px 10px 10px 0}
+.feature h3{font-size:26px}
+.feature .desc{font-size:16px}
+@media(max-width:860px){.feature{grid-template-columns:1fr;gap:0}.feature .card-body{padding:18px 6px 6px}}
 
-.bg-grid{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:680px){.bg-grid{grid-template-columns:1fr}}
-.bg-col{background:var(--surface);border-radius:14px;padding:20px 22px}
+.grid{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+
+.slim{margin-top:16px;background:var(--surface);border-radius:18px;padding:20px 24px}
+
+.repo-grid{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.repo-grid{grid-template-columns:1fr}}
+.repo{display:block;background:var(--surface);border-radius:18px;color:inherit;padding:18px;transition:background .15s ease}
+.repo:hover{background:var(--surface-2);text-decoration:none}
+.repo .card-body{padding:16px 6px 4px}
+.repo.text{padding:20px 24px}
+.repo.text .card-body{padding:0}
+.repo-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.repo h3{font-size:20px;font-weight:700;letter-spacing:-.014em}
+.repo .gh{font-size:12px;color:var(--dim)}
+.repo p.d{margin-top:10px;color:var(--muted);font-size:15px}
+.more{margin-top:18px;font-size:14.5px}
+
+.bg-grid{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.bg-grid{grid-template-columns:1fr}}
+.bg-col{background:var(--surface);border-radius:18px;padding:22px 24px}
 .bg-col h3{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
 .item{padding:12px 0;border-top:1px solid var(--hairline)}
 .item:first-of-type{border-top:none;padding-top:0}
@@ -137,7 +162,7 @@ a.tag:hover{text-decoration:none;background:var(--accent-soft);color:var(--accen
 .item p+.role{margin-top:4px}
 .item .note{color:var(--muted);font-size:13.5px;margin-top:4px}
 
-footer{margin-top:64px;border-top:1px solid var(--hairline);padding:30px 0 46px}
+footer{margin-top:80px;border-top:1px solid var(--hairline);padding:30px 0 46px}
 .cta{font-size:15.5px;color:var(--muted);max-width:660px}
 .fine{margin-top:18px;font-size:12px;color:var(--dim)}
 </style>
@@ -149,10 +174,10 @@ footer{margin-top:64px;border-top:1px solid var(--hairline);padding:30px 0 46px}
     <div class="who"><span class="dot"></span> ahmed.metered</div>
     <div class="top-right">
       <nav>
-        <a href="#products">Products</a>
-        <a href="#guides">Guides</a>
+        <a href="#projects">Projects</a>
         <a href="#oss">Open source</a>
         <a href="#background">Background</a>
+        <a href="#contact">Contact</a>
       </nav>
       <button id="theme-toggle" aria-label="Switch appearance" onclick="toggleTheme()">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -167,123 +192,112 @@ footer{margin-top:64px;border-top:1px solid var(--hairline);padding:30px 0 46px}
   <div class="hero">
     <h1>Ahmed Metered</h1>
     <p class="loc">Milan, Italy · CET · remote-friendly</p>
-    <p class="bio">I build and ship working software with AI. <b>Two products are live</b>, a third is being sold as a managed service, and the reusable parts are published as open source. Before this I spent nearly three years in quality assurance on an airline account, which is where the testing habit comes from.</p>
+    <p class="bio">I build and ship products with AI. I write the spec, set the pricing, build it and launch it. <b>SpecWatch and Roam Alone are live</b>, Cohorta is offered to Milan training academies as a managed service, and the reusable parts are open source. I spent nearly three years in quality assurance on an airline account, which is where the testing habit comes from.</p>
     <div class="links">
-      <a class="btn primary" target="_blank" rel="noopener" href="https://github.com/ahmedmetered">github.com/ahmedmetered</a>
-      <a class="btn" href="mailto:ahmedmetered@icloud.com">ahmedmetered@icloud.com</a>
+      <a class="btn primary" href="mailto:ahmedmetered@icloud.com">ahmedmetered@icloud.com</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://github.com/ahmedmetered">GitHub</a>
       <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/ahmedmetered/">LinkedIn</a>
+      <a class="btn" target="_blank" rel="noopener" href="cv/CV_Ahmed_Metered_Product_EN.pdf">CV · EN</a>
+      <a class="btn" target="_blank" rel="noopener" href="cv/CV_Ahmed_Metered_Product_IT.pdf">CV · IT</a>
     </div>
   </div>
 
-  <section id="products">
-    <h2>Products</h2>
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="sub">Each one is built and deployed. Click a screenshot to open it.</p>
 
-    <article class="card">
-      <div class="card-head"><h3>SpecWatch</h3><a class="tag live" target="_blank" rel="noopener" href="https://specwatch.me"><span class="dot"></span>live · specwatch.me</a></div>
-      <p class="desc">Watches suppliers' public product pages and reports what changed: price moves, spec values that quietly shift, datasheet links that die. Word-level diffs, daily digest or instant change-alert email, PDF reports, and Stripe subscriptions with four self-serve tiers. The backend is dependency-free Node running on a single Azure VM.</p>
-      <p class="stack">Node.js (zero-dependency API) · node:sqlite · Playwright · Vite · Stripe · SendGrid · Caddy + pm2 on Azure</p>
+    <div class="grid">
+      <article class="card">
+      <a class="shot" target="_blank" rel="noopener" href="https://specwatch.me"><img src="img/specwatch.jpg" width="1600" height="1000" alt="SpecWatch landing page showing a supplier page with a changed price and a dead datasheet link" loading="lazy"></a>
+      <div class="card-body">
+        <div class="card-head"><h3>SpecWatch</h3><a class="tag live" target="_blank" rel="noopener" href="https://specwatch.me"><span class="dot"></span>live · specwatch.me</a></div>
+        <p class="desc">For procurement teams who learn about a supplier's price rise from the invoice. SpecWatch watches supplier product pages and reports what changed: prices, specs, dead datasheet links. I scoped it around procurement, set four self-serve tiers, and built it end to end, including alerts, PDF reports and Stripe billing.</p>
+        <p class="stack">Node.js (zero-dependency API) · node:sqlite · Playwright · Vite · Stripe · SendGrid · Caddy + pm2 on Azure</p>
+      </div>
     </article>
 
-    <article class="card">
-      <div class="card-head"><h3>Roam Alone</h3><a class="tag live" target="_blank" rel="noopener" href="https://roamalone.app"><span class="dot"></span>live · roamalone.app</a></div>
-      <p class="desc">Paid, day-by-day Egypt itineraries for independent travellers. A request form, Stripe checkout, and a full multi-city plan delivered with revisions. I run the whole loop myself: the site, the commerce flow, and the content.</p>
-      <p class="stack">Next.js · Stripe</p>
-    </article>
+      <article class="card">
+        <span class="shot"><img src="img/cohorta.jpg" width="1600" height="1000" alt="Cohorta landing page: the CRM that fills your courses while you teach" loading="lazy"></span>
+        <div class="card-body">
+          <div class="card-head"><h3>Cohorta</h3><span class="tag">private repo</span></div>
+          <p class="desc">For academies that lose enrolments between the first message and the first payment. Cohorta keeps every lead, follow-up, enrolment and instalment in one place, in English and Italian. I wrote the spec, defined the managed-service offer, and built it with 587 unit tests and 19 end-to-end tests.</p>
+          <p class="stack">Next.js 15 · React 19 · PostgreSQL 16 · Drizzle · Docker Compose · Caddy</p>
+        </div>
+      </article>
 
-    <article class="card">
-      <div class="card-head"><h3>Cohorta</h3><span class="tag">private repo</span></div>
-      <p class="desc">A self-hosted CRM for cohort-based course academies: leads and follow-up cadences, enrolments by cohort, finance and forecasting, client portals. Bilingual English/Italian with a CI gate that fails the build on a missing translation. 587 unit tests and 19 end-to-end tests. Currently being sold as a managed service to training academies in Milan.</p>
-      <p class="stack">Next.js 15 · React 19 · PostgreSQL 16 · Drizzle · Docker Compose · Caddy</p>
-    </article>
+      <article class="card">
+        <a class="shot" target="_blank" rel="noopener" href="https://roamalone.app"><img src="img/roamalone.jpg" width="1600" height="1000" alt="Roam Alone landing page: Egypt, planned properly" loading="lazy"></a>
+        <div class="card-body">
+          <div class="card-head"><h3>Roam Alone</h3><a class="tag live" target="_blank" rel="noopener" href="https://roamalone.app"><span class="dot"></span>live · roamalone.app</a></div>
+          <p class="desc">For independent travellers who want an Egypt plan written by someone local. They fill in a request form and pay through Stripe, then receive a day-by-day multi-city itinerary and can ask for revisions. I run the whole loop myself: the site, the checkout and the itinerary content.</p>
+          <p class="stack">Next.js · Stripe</p>
+        </div>
+      </article>
 
-    <article class="card">
-      <div class="card-head"><h3>Perfume Finder</h3><span class="card-tags"><a class="tag live" target="_blank" rel="noopener" href="https://ahmedmetered.github.io/perfume-finder/"><span class="dot"></span>live · ahmedmetered.github.io/perfume-finder</a><a class="tag" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/perfume-finder">repo</a></span></div>
-      <p class="desc">A quiz-based fragrance recommender: six questions — or describe what you want in your own words — scored locally in real time against a curated library of 40 well-known fragrances. Every result gets a procedural 3D bottle built in Three.js (glass, juice color and label per fragrance family) that you can drag and spin. The scoring engine and data layer are covered by an automated check suite, and the whole thing ships with zero build step.</p>
-      <p class="stack">Vanilla JS · three.js · GitHub Pages</p>
-    </article>
-  </section>
+      <article class="card">
+        <a class="shot" target="_blank" rel="noopener" href="https://milanstudyspots.lovable.app/"><img src="img/studyspots.jpg" width="1600" height="1000" alt="Milan Study Spots home page with photos of libraries and cafés" loading="lazy"></a>
+        <div class="card-body">
+          <div class="card-head"><h3>Milan Study Spots</h3><span class="card-tags"><a class="tag live" target="_blank" rel="noopener" href="https://milanstudyspots.lovable.app/"><span class="dot"></span>live</a><a class="tag" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/milanstudyspots">repo · built with Lovable</a></span></div>
+          <p class="desc">For students who need a good place to work in Milan. Ten libraries, cafés and study rooms worth a four-hour block, with filters by type, neighborhood and traits, and a page per spot covering hours, noise level, price band and one insider tip. I wrote the brief and chose the spots, and built it with Lovable.</p>
+          <p class="stack">React · Vite · Tailwind · Lovable</p>
+        </div>
+      </article>
 
-  <section id="guides">
-    <h2>Guides</h2>
-
-    <article class="card">
-      <div class="card-head"><h3>Milan Study Spots</h3><span class="card-tags"><a class="tag live" target="_blank" rel="noopener" href="https://milanstudyspots.lovable.app/"><span class="dot"></span>live · milanstudyspots.lovable.app</a><a class="tag" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/milanstudyspots">repo · built with Lovable</a></span></div>
-      <p class="desc">A curated guide to the libraries, cafés and study rooms in Milan worth a four-hour block: ten spots, filters by type, neighborhood and traits, and a page per spot with hours, noise level, price band and one insider tip. Built with Lovable from my brief and my shortlist of spots.</p>
-      <p class="stack">React · Vite · Tailwind · Lovable</p>
+      <article class="card">
+        <a class="shot" target="_blank" rel="noopener" href="https://interrogami.lovable.app/"><img src="img/interrogami.jpg" width="1600" height="1000" alt="Interrogami study map with a professor character and a January snow scene" loading="lazy"></a>
+        <div class="card-body">
+          <div class="card-head"><h3>Interrogami</h3><span class="card-tags"><a class="tag live" target="_blank" rel="noopener" href="https://interrogami.lovable.app/"><span class="dot"></span>live</a><a class="tag" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/interrogami">repo · built with Lovable</a></span></div>
+          <p class="desc">For students preparing Italian oral exams. Built at the Learning Reimagined Hackathon (Albert School Milano, October 2026) from my product spec: it asks questions out loud, listens to your answer and grades on the 0-30 scale. Fail an exam and the study map moves the calendar forward.</p>
+          <p class="stack">React · Web Speech API (STT + TTS) · Lovable</p>
+        </div>
+      </article>
+      <article class="card">
+      <a class="shot" target="_blank" rel="noopener" href="https://ahmedmetered.github.io/perfume-finder/"><img src="img/perfume.jpg" width="1600" height="1000" alt="Perfume Finder quiz asking what you are spending, with a live ranking of fragrances below" loading="lazy"></a>
+      <div class="card-body">
+        <div class="card-head"><h3>Perfume Finder</h3><span class="card-tags"><a class="tag live" target="_blank" rel="noopener" href="https://ahmedmetered.github.io/perfume-finder/"><span class="dot"></span>live</a><a class="tag" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/perfume-finder">repo</a></span></div>
+        <p class="desc">For people who don't know which fragrance to try. Answer six questions or describe what you want in your own words, and the ranking of 40 fragrances updates on every answer, scored on your device. A side project with an automated check suite.</p>
+        <p class="stack">Vanilla JS · three.js · GitHub Pages</p>
+      </div>
     </article>
+    </div>
   </section>
 
   <section id="oss">
-    <h2>Open source · github.com/ahmedmetered</h2>
+    <h2>Open source</h2>
+    <p class="sub">Tools I use every day, published under MIT at github.com/ahmedmetered.</p>
 
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anydeals">
-      <div class="repo-head"><h3>anydeals</h3><span class="gh">Agent skills · MIT</span></div>
-      <p>Lead generation and cold outreach as one pipeline: locality-sweep prospect lists for any vertical in any city, worked through approval-first personalized outreach with cadence, replies, and a tracker. Bundles the prospecting and outreach skills into a single workflow.</p>
-    </a>
+    <div class="repo-grid">
+      <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyjobsearch">
+        <span class="shot"><img src="img/jobsearch.jpg" width="1600" height="1000" alt="anyjobsearch application tracker in dark mode with two interviewing entries" loading="lazy"></span>
+        <div class="card-body">
+          <div class="repo-head"><h3>anyjobsearch</h3><span class="gh">Agent skills · MIT</span></div>
+          <p class="d">For job seekers who run the search with the AI agent they already use. It filters postings through eligibility and language gates, ranks them on five dimensions, builds a one-page CV as PDF and tracks every application. Screenshot uses demo data.</p>
+        </div>
+      </a>
 
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyjobsearch">
-      <div class="repo-head"><h3>anyjobsearch</h3><span class="gh">Agent skills · MIT</span></div>
-      <p>A job-search system that runs on the AI agent you already have: hard eligibility and language gates, five-dimension posting ranking, a built-in one-page CV builder that renders to PDF without LaTeX, and an application tracker. Method adapted from the open-source ai-job-search framework.</p>
-    </a>
+      <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anydeals">
+        <span class="shot"><img src="img/deals.jpg" width="1600" height="1000" alt="anydeals outbound tracker in dark mode with a drafted message awaiting approval" loading="lazy"></span>
+        <div class="card-body">
+          <div class="repo-head"><h3>anydeals</h3><span class="gh">Agent skills · MIT</span></div>
+          <p class="d">For anyone selling to local businesses. It builds prospect lists for any vertical in any city, then runs approval-first outreach: the agent drafts, you approve, and the tracker holds the cadence and the replies. Screenshot uses demo data.</p>
+        </div>
+      </a>
 
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyaudit">
-      <div class="repo-head"><h3>anyaudit</h3><span class="gh">Agent skills · MIT</span></div>
-      <p>Multi-lens code review: stack detection, 33 reference lenses (architecture, performance, per-language guides), and a verification pass that drops every finding that fails to survive contact with the actual code. Optional minimal-patch fix loop. Adapted from code-review-skill and adamsreview.</p>
-    </a>
+      <a class="repo text" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyrea">
+        <div class="card-body">
+          <div class="repo-head"><h3>anyrea</h3><span class="gh">JavaScript · MIT</span></div>
+          <p class="d">For anyone who needs to understand an app without its source. A bridge that lets the AI agent you already use drive the open-source rea CLI across binaries, Electron apps, .NET assemblies and websites.</p>
+        </div>
+      </a>
 
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anydiagram">
-      <div class="repo-head"><h3>anydiagram</h3><span class="gh">Agent skills · MIT</span></div>
-      <p>Architecture diagrams for any codebase: perspective-based recursive analysis into layered Mermaid docs (structure, data flow, dependencies, API surface, deployment), each citing the source files it was derived from, with a diff mode that updates instead of regenerating. Adapted from oh-my-mermaid.</p>
-    </a>
-
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyblueprint">
-      <div class="repo-head"><h3>anyblueprint</h3><span class="gh">Agent skills · MIT</span></div>
-      <p>Documentation-first project planning: interview-driven discovery into four interconnected documents (specification, implementation guide, tasks, branding) synthesized into one self-contained coding-agent prompt. Adapted from project-architect.</p>
-    </a>
-
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anybottle">
-      <div class="repo-head"><h3>anybottle</h3><span class="gh">Python · Node · MIT</span></div>
-      <p>Turns a bottle product photo into a quality-gated procedural Three.js model, measured from the image. An orchestration layer over img2threejs: measurement, batch pipeline, material wiring, and a recipe doc of every pitfall learned the hard way.</p>
-    </a>
-
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyrea">
-      <div class="repo-head"><h3>anyrea</h3><span class="gh">JavaScript · MIT</span></div>
-      <p>Reverse engineering from the agent you already have: a universal MCP bridge and skill that turn the open-source rea CLI into a workbench for binaries, Electron/JS apps, .NET assemblies and websites.</p>
-    </a>
-
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/prospect-sweep">
-      <div class="repo-head"><h3>prospect-sweep</h3><span class="gh">Node.js · Docker · Playwright</span></div>
-      <p>Locality-sweep lead generation. Plans per-municipality search grids for any city, dedupes by Google place ID, filters categories before ranking so big-box stores stop polluting the list, and pulls social links from each business's own website. Validated on a real 1,517-row Milan crawl.</p>
-    </a>
-
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyoutreach">
-      <div class="repo-head"><h3>anyoutreach</h3><span class="gh">Agent skills · MIT</span></div>
-      <p>An agent-native cold outreach pack. Turns terminal coding agents (ZCode, Claude Code, Codex) into an approval-first outreach workflow: it drafts, you approve, nothing sends without you. Plain-text state, no API keys.</p>
-    </a>
-
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/i18n-keycheck">
-      <div class="repo-head"><h3>i18n-keycheck</h3><span class="gh">Node.js · node:fs only</span></div>
-      <p>A single-file CI gate for hand-rolled i18n: fails the build when a key used in code is missing from a dictionary file, including dynamic template prefixes. Zero npm dependencies. Validated against a real 2,991-key bilingual codebase.</p>
-    </a>
-
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/qa-automation-portfolio">
-      <div class="repo-head"><h3>qa-automation-portfolio</h3><span class="gh">Playwright · TypeScript · GitHub Actions</span></div>
-      <p>Test suite with a page-object model: 7 UI tests, 9 API contract tests, and 3 axe-core accessibility scans, all green in GitHub Actions CI.</p>
-    </a>
-
-    <a class="repo" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/cvhtml2doc">
-      <div class="repo-head"><h3>cvhtml2doc</h3><span class="gh">Python · Node · headless Edge</span></div>
-      <p>A pipeline for pixel-matching CVs: extract design tokens from a reference PDF, render HTML to PDF headlessly, audit the layout numerically, and emit an editable DOCX with embedded fonts.</p>
-    </a>
-  </section>
-
-  <section id="hackathon">
-    <h2>Hackathon</h2>
-    <article class="card">
-      <div class="card-head"><h3>Interrogami</h3><span class="card-tags"><a class="tag live" target="_blank" rel="noopener" href="https://interrogami.lovable.app/"><span class="dot"></span>live · interrogami.lovable.app</a><a class="tag" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/interrogami">repo · built with Lovable</a></span></div>
-      <p class="desc">A gamified oral-exam trainer built at the Learning Reimagined Hackathon (Albert School Milano, October 2026) from my product spec. It speaks exam questions out loud, listens to the answer through the microphone, grades on the Italian 0-30 scale, and the study map moves the academic calendar forward when you fail, snow melting into spring rain.</p>
-      <p class="stack">React · Web Speech API (STT + TTS) · Lovable</p>
-    </article>
+      <a class="repo text" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyaudit">
+        <div class="card-body">
+          <div class="repo-head"><h3>anyaudit</h3><span class="gh">Agent skills · MIT</span></div>
+          <p class="d">For developers who want a code review they can trust. It detects the stack, applies 33 review lenses, and checks every finding against the actual code before reporting it. An optional loop applies minimal patches.</p>
+        </div>
+      </a>
+    </div>
+    <p class="more"><a target="_blank" rel="noopener" href="https://github.com/ahmedmetered?tab=repositories">All repositories on GitHub →</a></p>
   </section>
 
   <section id="background">
@@ -335,10 +349,10 @@ footer{margin-top:64px;border-top:1px solid var(--hairline);padding:30px 0 46px}
 
 </main>
 
-<footer>
+<footer id="contact">
   <div class="wrap">
-    <p class="cta">Open to remote roles and contract work in automation, QA automation, and AI-assisted development. The fastest way to reach me is <a href="mailto:ahmedmetered@icloud.com">email</a>.</p>
-    <p class="fine">Last updated October 2026 · Milan, Italy</p>
+    <p class="cta">Open to product, QA automation and AI-assisted development roles, remote or in Milan, and to contract work. The fastest way to reach me is <a href="mailto:ahmedmetered@icloud.com">email</a>.</p>
+    <p class="fine">Last updated November 2026 · Milan, Italy</p>
   </div>
 </footer>
 
