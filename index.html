@@ -344,6 +344,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
 <div class="dots" id="dots" role="navigation" aria-label="Projects">
   <a href="#specwatch" data-name="SpecWatch" aria-label="SpecWatch"></a>
   <a href="#cohorta" data-name="Cohorta" aria-label="Cohorta"></a>
+  <a href="#coldbrew" data-name="Coldbrew" aria-label="Coldbrew"></a>
   <a href="#perfume" data-name="Perfume Finder" aria-label="Perfume Finder"></a>
   <a href="#posto" data-name="Posto" aria-label="Posto"></a>
   <a href="#interrogami" data-name="Interrogami" aria-label="Interrogami"></a>
@@ -367,7 +368,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
           </span></span>
           <span class="sr">I write the spec, design it, build it, test it and launch it.</span>
         </h1>
-        <p class="pitch"><b>Ahmed Metered</b>, product builder in Milan. I take each product from the first spec to a live site. SpecWatch and Roam Alone are live today, and Posto, the job-search app I run my own search on, is open source.</p>
+        <p class="pitch"><b>Ahmed Metered</b>, product builder in Milan. I take each product from the first spec to a live site. SpecWatch and Roam Alone are live today. Posto, the job-search app I run my own search on, and Coldbrew, my outreach app, are open source.</p>
         <div class="links">
           <a class="btn primary icon" href="mailto:ahmedmetered@icloud.com" aria-label="Email Ahmed" title="Email"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg></a>
           <a class="btn icon" target="_blank" rel="noopener" href="https://github.com/ahmedmetered" aria-label="GitHub" title="GitHub"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gh"/></svg></a>
@@ -458,7 +459,24 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band" id="perfume" data-enter="blur" style="--b-bg:#0A2036;--b-ink:#EAF4FA;--b-mute:#A2B9CB;--b-acc:#E6C27A;--b-w:200;--b-s:100%">
+    <section class="band" id="coldbrew" data-enter="mask" style="--b-bg:#1B1410;--b-ink:#F1E7DA;--b-mute:#C2B09C;--b-acc:#D49A5A;--b-on:#1B1410;--b-w:650;--b-s:100%">
+      <div class="wrap">
+        <h2 class="band-title"><span class="line"><span>Coldbrew</span></span></h2>
+        <div class="band-in">
+          <div class="band-copy">
+            <p class="band-lead fade">For people who sell to local businesses and want every message to be a good one.</p>
+            <p class="band-body fade d1">Coldbrew finds and ranks the businesses in a city, then holds every draft for your approval: a linter checks that each message is short, specific and honest. It reads the replies, charts what works, and never sends anything itself. I designed it, built it and tested it end to end.</p>
+            <p class="band-stack fade d2">Node.js (no runtime dependencies) · node:sqlite · OpenStreetMap · Google Maps scraper in Docker · IMAP and Instagram (read-only) · 32 automated tests</p>
+            <div class="band-links fade d3"><a class="pill main" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/coldbrew">Repo<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><span class="pill quiet">open source · MIT</span></div>
+          </div>
+          <figure class="band-shot fade d1">
+            <a class="frame-link" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/coldbrew"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>github.com/ahmedmetered/coldbrew</span></div><img src="img/coldbrew.jpg" width="800" height="512" alt="Coldbrew's dashboard in espresso colours: activity over time, where prospects are now, and reply rates, with demo data" loading="lazy"></div></a>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="band flip" id="perfume" data-enter="blur" style="--b-bg:#0A2036;--b-ink:#EAF4FA;--b-mute:#A2B9CB;--b-acc:#E6C27A;--b-w:200;--b-s:100%">
       <div class="wrap">
         <h2 class="band-title"><span>Perfume Finder</span></h2>
         <div class="band-in">
@@ -475,7 +493,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band flip" id="posto" data-enter="bounce" style="--b-bg:#2B35FF;--b-ink:#FFFFFF;--b-mute:#D2D5FF;--b-acc:#FFD400;--b-on:#14143A;--b-w:800;--b-s:100%">
+    <section class="band" id="posto" data-enter="bounce" style="--b-bg:#2B35FF;--b-ink:#FFFFFF;--b-mute:#D2D5FF;--b-acc:#FFD400;--b-on:#14143A;--b-w:800;--b-s:100%">
       <div class="wrap">
         <h2 class="band-title"><span>Posto</span></h2>
         <div class="band-in">
@@ -492,7 +510,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band" id="interrogami" data-enter="bounce" style="--b-bg:#BFE6FB;--b-ink:#10304A;--b-mute:#33566F;--b-acc:#58CC02;--b-on:#0B2A00;--b-w:800;--b-s:100%">
+    <section class="band flip" id="interrogami" data-enter="bounce" style="--b-bg:#BFE6FB;--b-ink:#10304A;--b-mute:#33566F;--b-acc:#58CC02;--b-on:#0B2A00;--b-w:800;--b-s:100%">
       <div class="wrap">
         <h2 class="band-title"><span>Interrogami</span></h2>
         <div class="band-in">
@@ -509,7 +527,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band flip" id="roamalone" data-enter="words" style="--b-bg:#F6F1E6;--b-ink:#1F1A12;--b-mute:#5C5444;--b-acc:#B5481F;--b-on:#FFF7EE;--b-w:780;--b-s:90%">
+    <section class="band" id="roamalone" data-enter="words" style="--b-bg:#F6F1E6;--b-ink:#1F1A12;--b-mute:#5C5444;--b-acc:#B5481F;--b-on:#FFF7EE;--b-w:780;--b-s:90%">
       <div class="wrap">
         <h2 class="band-title"><span class="w" style="--w:0"><span>Roam</span></span> <span class="w" style="--w:1"><span>Alone</span></span></h2>
         <div class="band-in">
@@ -526,7 +544,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band" id="studyspots" data-enter="mask" style="--b-bg:#FBF5EA;--b-ink:#241A12;--b-mute:#5E5142;--b-acc:#8F3A1F;--b-on:#FFF6EC;--b-w:520;--b-s:100%">
+    <section class="band flip" id="studyspots" data-enter="mask" style="--b-bg:#FBF5EA;--b-ink:#241A12;--b-mute:#5E5142;--b-acc:#8F3A1F;--b-on:#FFF6EC;--b-w:520;--b-s:100%">
       <div class="wrap">
         <h2 class="band-title"><span class="line"><span>Milan Study Spots</span></span></h2>
         <div class="band-in">
@@ -548,22 +566,6 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
     <div class="wrap">
       <h2 class="band-title"><span class="line"><span>Open source</span></span></h2>
       <p class="band-lead oss-intro fade">Tools I use every day, published under MIT at github.com/ahmedmetered.</p>
-      <div class="oss-grid">
-        <article class="oss-item">
-          <div class="band-shot fade"><a class="frame-link" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyjobsearch"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>github.com/ahmedmetered/anyjobsearch</span></div><img src="img/jobsearch.jpg" width="1600" height="1000" alt="anyjobsearch application tracker in dark mode with two interviewing entries" loading="lazy"></div></a></div>
-          <h3 class="fade d1">anyjobsearch</h3>
-          <p class="band-lead fade d1">For job seekers who run the search with the AI agent they already use.</p>
-          <p class="band-body fade d2">It filters postings through eligibility and language gates, ranks them on five dimensions, builds a one-page CV as PDF and tracks every application. Screenshot uses demo data.</p>
-          <div class="band-links fade d3"><a class="pill main" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyjobsearch">Repo<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a></div>
-        </article>
-        <article class="oss-item">
-          <div class="band-shot fade"><a class="frame-link" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anydeals"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>github.com/ahmedmetered/anydeals</span></div><img src="img/deals.jpg" width="1600" height="1000" alt="anydeals outbound tracker in dark mode with a drafted message awaiting approval" loading="lazy"></div></a></div>
-          <h3 class="fade d1">anydeals</h3>
-          <p class="band-lead fade d1">For anyone who needs to get deals with the AI agent they already use.</p>
-          <p class="band-body fade d2">It bundles prospect-sweep, which builds the prospect list, with anyoutreach, which drafts each message for you to approve. The tracker holds the cadence and the replies. Screenshot uses demo data.</p>
-          <div class="band-links fade d3"><a class="pill main" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anydeals">Repo<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a></div>
-        </article>
-      </div>
       <div class="oss-list">
         <a class="oss-row fade" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyrea">
           <h3>anyrea</h3>
@@ -573,6 +575,26 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
         <a class="oss-row fade" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anyaudit">
           <h3>anyaudit</h3>
           <div><p class="band-lead">For developers who want a code review they can trust.</p><p class="band-body">It detects the stack, applies 33 review lenses, and checks every finding against the actual code before it reports it.</p></div>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg>
+        </a>
+        <a class="oss-row fade" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/anydiagram">
+          <h3>anydiagram</h3>
+          <div><p class="band-lead">For developers joining a codebase they did not write.</p><p class="band-body">It maps a codebase into layered Mermaid diagrams, each one citing the source files it came from, and updates them instead of regenerating.</p></div>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg>
+        </a>
+        <a class="oss-row fade" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/prospect-sweep">
+          <h3>prospect-sweep</h3>
+          <div><p class="band-lead">For anyone who needs a clean list of local businesses.</p><p class="band-body">It turns every dentist in a city and its hinterland into a ranked, deduplicated prospect list, validated on a real 1,517-row crawl.</p></div>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg>
+        </a>
+        <a class="oss-row fade" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/i18n-keycheck">
+          <h3>i18n-keycheck</h3>
+          <div><p class="band-lead">For teams with hand-rolled translations.</p><p class="band-body">A single-file CI gate that fails the build when a key used in code is missing from a dictionary. No dependencies.</p></div>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg>
+        </a>
+        <a class="oss-row fade" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/qa-automation-portfolio">
+          <h3>qa-automation-portfolio</h3>
+          <div><p class="band-lead">For anyone judging test craft.</p><p class="band-body">Playwright and TypeScript suites with page objects, API contract tests and accessibility scans, green in CI.</p></div>
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg>
         </a>
       </div>
