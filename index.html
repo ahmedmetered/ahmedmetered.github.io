@@ -342,6 +342,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
 </header>
 
 <div class="dots" id="dots" role="navigation" aria-label="Projects">
+  <a href="#posto" data-name="Posto" aria-label="Posto"></a>
   <a href="#specwatch" data-name="SpecWatch" aria-label="SpecWatch"></a>
   <a href="#cohorta" data-name="Cohorta" aria-label="Cohorta"></a>
   <a href="#perfume" data-name="Perfume Finder" aria-label="Perfume Finder"></a>
@@ -366,7 +367,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
           </span></span>
           <span class="sr">I write the spec, design it, build it, test it and launch it.</span>
         </h1>
-        <p class="pitch"><b>Ahmed Metered</b>, product builder in Milan. I take each product from the first spec to a live site. SpecWatch and Roam Alone are live today.</p>
+        <p class="pitch"><b>Ahmed Metered</b>, product builder in Milan. I take each product from the first spec to a live site. SpecWatch and Roam Alone are live today, and Posto, the job-search app I run my own search on, is open source.</p>
         <div class="links">
           <a class="btn primary icon" href="mailto:ahmedmetered@icloud.com" aria-label="Email Ahmed" title="Email"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg></a>
           <a class="btn icon" target="_blank" rel="noopener" href="https://github.com/ahmedmetered" aria-label="GitHub" title="GitHub"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gh"/></svg></a>
@@ -422,6 +423,23 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
   </section>
 
   <div id="projects">
+
+    <section class="band flip" id="posto" data-enter="bounce" style="--b-bg:#2B35FF;--b-ink:#FFFFFF;--b-mute:#D2D5FF;--b-acc:#FFD400;--b-on:#14143A;--b-w:800;--b-s:100%">
+      <div class="wrap">
+        <h2 class="band-title"><span>Posto</span></h2>
+        <div class="band-in">
+          <div class="band-copy">
+            <p class="band-lead fade">For job seekers whose situation rules out most postings.</p>
+            <p class="band-body fade d1">Posto checks every posting against your real situation (work-permit hours, relocation, remote eligibility, languages) and says why each job is in or out. It also tracks your applications, reads your inbox for replies and compares your CVs with each posting. I designed, built and tested it end to end, and I run my own search on it.</p>
+            <p class="band-stack fade d2">Node.js (no runtime dependencies) · node:sqlite · 12 job sources · IMAP · Chrome extension · 41 automated tests</p>
+            <div class="band-links fade d3"><a class="pill main" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/posto">Repo<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><span class="pill quiet">open source · MIT</span></div>
+          </div>
+          <figure class="band-shot fade d1">
+            <a class="frame-link" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/posto"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>github.com/ahmedmetered/posto</span></div><img src="img/posto.jpg" width="800" height="515" alt="Posto's Today screen: job postings as visa pages, each with an inked FIT stamp and the reasons it fits" loading="lazy"></div></a>
+          </figure>
+        </div>
+      </div>
+    </section>
 
     <section class="band" id="specwatch" data-enter="mask" style="--b-bg:#0B0B0D;--b-ink:#F4EEE0;--b-mute:#B9B2A2;--b-acc:#E0B85C;--b-w:300;--b-s:100%">
       <div class="wrap">
