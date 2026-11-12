@@ -276,6 +276,9 @@ a.frame-link:hover img{filter:brightness(1.04)}
 .site p{margin-top:8px;color:var(--b-mute);font-size:15.5px;line-height:1.55}
 .site .band-links{margin-top:16px}
 .site .pill{padding:7px 14px;font-size:13.5px}
+.site .band-stack{margin-top:10px;font-size:13px}
+.sites-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:600px){.sites-grid.two{grid-template-columns:minmax(0,1fr)}}
 
 .bg-grid{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(28px,5vw,72px);row-gap:clamp(28px,3.5vw,44px);align-items:start}
 @media(max-width:760px){.bg-grid{grid-template-columns:minmax(0,1fr)}}
@@ -357,11 +360,10 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
   <a href="#specwatch" data-name="SpecWatch" aria-label="SpecWatch"></a>
   <a href="#cohorta" data-name="Cohorta" aria-label="Cohorta"></a>
   <a href="#coldbrew" data-name="Coldbrew" aria-label="Coldbrew"></a>
-  <a href="#perfume" data-name="Perfume Finder" aria-label="Perfume Finder"></a>
   <a href="#posto" data-name="Posto" aria-label="Posto"></a>
   <a href="#interrogami" data-name="Interrogami" aria-label="Interrogami"></a>
   <a href="#roamalone" data-name="Roam Alone" aria-label="Roam Alone"></a>
-  <a href="#studyspots" data-name="Milan Study Spots" aria-label="Milan Study Spots"></a>
+  <a href="#side" data-name="Side projects" aria-label="Side projects"></a>
   <a href="#sites" data-name="Arabic-first sites" aria-label="Arabic-first sites"></a>
 </div>
 
@@ -489,24 +491,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band flip" id="perfume" data-enter="blur" style="--b-bg:#0A2036;--b-ink:#EAF4FA;--b-mute:#A2B9CB;--b-acc:#E6C27A;--b-w:200;--b-s:100%">
-      <div class="wrap">
-        <h2 class="band-title"><span>Perfume Finder</span></h2>
-        <div class="band-in">
-          <div class="band-copy">
-            <p class="band-lead fade">For people who don't know which fragrance to try.</p>
-            <p class="band-body fade d1">Answer six questions or describe what you want in your own words, and the ranking of 40 fragrances updates on every answer, scored on your device. A side project with an automated check suite.</p>
-            <p class="band-stack fade d2">Vanilla JS · three.js · GitHub Pages</p>
-            <div class="band-links fade d3"><a class="pill main" target="_blank" rel="noopener" href="https://ahmedmetered.github.io/perfume-finder/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/perfume-finder">Repo</a></div>
-          </div>
-          <figure class="band-shot fade d1">
-            <a class="frame-link" target="_blank" rel="noopener" href="https://ahmedmetered.github.io/perfume-finder/"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>ahmedmetered.github.io/perfume-finder</span></div><img src="img/perfume.jpg" width="1600" height="1000" alt="Perfume Finder quiz asking what you are spending, with a live ranking of fragrances below" loading="lazy"></div></a>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="band" id="posto" data-enter="bounce" style="--b-bg:#2B35FF;--b-ink:#FFFFFF;--b-mute:#D2D5FF;--b-acc:#FFD400;--b-on:#14143A;--b-w:800;--b-s:100%">
+    <section class="band flip" id="posto" data-enter="bounce" style="--b-bg:#2B35FF;--b-ink:#FFFFFF;--b-mute:#D2D5FF;--b-acc:#FFD400;--b-on:#14143A;--b-w:800;--b-s:100%">
       <div class="wrap">
         <h2 class="band-title"><span>Posto</span></h2>
         <div class="band-in">
@@ -523,7 +508,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band flip" id="interrogami" data-enter="bounce" style="--b-bg:#BFE6FB;--b-ink:#10304A;--b-mute:#33566F;--b-acc:#58CC02;--b-on:#0B2A00;--b-w:800;--b-s:100%">
+    <section class="band" id="interrogami" data-enter="bounce" style="--b-bg:#BFE6FB;--b-ink:#10304A;--b-mute:#33566F;--b-acc:#58CC02;--b-on:#0B2A00;--b-w:800;--b-s:100%">
       <div class="wrap">
         <h2 class="band-title"><span>Interrogami</span></h2>
         <div class="band-in">
@@ -540,7 +525,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band" id="roamalone" data-enter="words" style="--b-bg:#F6F1E6;--b-ink:#1F1A12;--b-mute:#5C5444;--b-acc:#B5481F;--b-on:#FFF7EE;--b-w:780;--b-s:90%">
+    <section class="band flip" id="roamalone" data-enter="words" style="--b-bg:#F6F1E6;--b-ink:#1F1A12;--b-mute:#5C5444;--b-acc:#B5481F;--b-on:#FFF7EE;--b-w:780;--b-s:90%">
       <div class="wrap">
         <h2 class="band-title"><span class="w" style="--w:0"><span>Roam</span></span> <span class="w" style="--w:1"><span>Alone</span></span></h2>
         <div class="band-in">
@@ -556,24 +541,32 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
         </div>
       </div>
     </section>
-
-    <section class="band flip" id="studyspots" data-enter="mask" style="--b-bg:#FBF5EA;--b-ink:#241A12;--b-mute:#5E5142;--b-acc:#8F3A1F;--b-on:#FFF6EC;--b-w:520;--b-s:100%">
+    <section class="band sites" id="side" data-enter="mask" style="--b-bg:#FBF5EA;--b-ink:#241A12;--b-mute:#5E5142;--b-acc:#8F3A1F;--b-on:#FFF6EC;--b-w:520;--b-s:100%">
       <div class="wrap">
-        <h2 class="band-title"><span class="line"><span>Milan Study Spots</span></span></h2>
-        <div class="band-in">
-          <div class="band-copy">
-            <p class="band-lead fade">For students who need a good place to work in Milan.</p>
-            <p class="band-body fade d1">Ten libraries, cafés and study rooms worth a four-hour block, with filters by type, neighborhood and traits, and a page per spot covering hours, noise level, price band and one insider tip. I wrote the brief and chose the spots, and built it with Lovable.</p>
-            <p class="band-stack fade d2">React · Vite · Tailwind · Lovable</p>
-            <div class="band-links fade d3"><a class="pill main" target="_blank" rel="noopener" href="https://milanstudyspots.lovable.app/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/milanstudyspots">Repo</a></div>
-          </div>
-          <figure class="band-shot fade d1">
+        <h2 class="band-title"><span class="line"><span>Side projects</span></span></h2>
+        <div class="sites-intro">
+          <p class="band-lead fade">Two smaller builds, each made to answer one question.</p>
+        </div>
+        <div class="sites-grid two">
+          <article class="site fade d1">
+            <a class="frame-link" target="_blank" rel="noopener" href="https://ahmedmetered.github.io/perfume-finder/"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>ahmedmetered.github.io/perfume-finder</span></div><img src="img/perfume.jpg" width="1600" height="1000" alt="Perfume Finder quiz asking what you are spending, with a live ranking of fragrances below" loading="lazy"></div></a>
+            <h3>Perfume Finder</h3>
+            <p>Which fragrance should I try? Answer six questions or describe what you want, and a ranking of 40 fragrances updates on every answer, scored on your device.</p>
+            <p class="band-stack">Vanilla JS · three.js · GitHub Pages</p>
+            <div class="band-links"><a class="pill main" target="_blank" rel="noopener" href="https://ahmedmetered.github.io/perfume-finder/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/perfume-finder">Repo</a></div>
+          </article>
+          <article class="site fade d2">
             <a class="frame-link" target="_blank" rel="noopener" href="https://milanstudyspots.lovable.app/"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>milanstudyspots.lovable.app</span></div><img src="img/studyspots.jpg" width="1600" height="1000" alt="Milan Study Spots home page with photos of libraries and cafés" loading="lazy"></div></a>
-          </figure>
+            <h3>Milan Study Spots</h3>
+            <p>Where can I work for four hours in Milan? Ten libraries, cafés and study rooms, with filters and a page per spot. I chose the spots and built it with Lovable.</p>
+            <p class="band-stack">React · Vite · Tailwind · Lovable</p>
+            <div class="band-links"><a class="pill main" target="_blank" rel="noopener" href="https://milanstudyspots.lovable.app/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/milanstudyspots">Repo</a></div>
+          </article>
         </div>
       </div>
     </section>
-    <section class="band sites" id="sites" data-enter="mask" style="--b-bg:#12332B;--b-ink:#F3EFE3;--b-mute:#B5C6BC;--b-acc:#F2B84B;--b-on:#1C1500;--b-w:700;--b-s:90%">
+
+    <section class="band sites" id="sites" data-enter="mask" style="--b-bg:#E4EFE6;--b-ink:#12332B;--b-mute:#3F5A4F;--b-acc:#12332B;--b-on:#F3EFE3;--b-w:700;--b-s:90%">
       <div class="wrap">
         <h2 class="band-title"><span class="line"><span>Arabic-first sites</span></span></h2>
         <div class="sites-intro">
@@ -802,6 +795,11 @@ var IT = {
   "For students who need a good place to work in Milan.": "Per gli studenti che cercano un buon posto dove lavorare a Milano.",
   "Ten libraries, cafés and study rooms worth a four-hour block, with filters by type, neighborhood and traits, and a page per spot covering hours, noise level, price band and one insider tip. I wrote the brief and chose the spots, and built it with Lovable.": "Dieci biblioteche, caffè e sale studio che valgono un blocco di quattro ore, con filtri per tipo, quartiere e caratteristiche, e una pagina per ogni posto con orari, livello di rumore, fascia di prezzo e un consiglio da insider. Ho scritto il brief, scelto i posti e l'ho costruito con Lovable.",
   "Milan Study Spots home page with photos of libraries and cafés": "Home page di Milan Study Spots con foto di biblioteche e caffè",
+  /* Side projects */
+  "Side projects": "Progetti personali",
+  "Two smaller builds, each made to answer one question.": "Due progetti più piccoli, ognuno nato per rispondere a una domanda.",
+  "Which fragrance should I try? Answer six questions or describe what you want, and a ranking of 40 fragrances updates on every answer, scored on your device.": "Quale profumo dovrei provare? Rispondi a sei domande o descrivi cosa cerchi, e una classifica di 40 profumi si aggiorna a ogni risposta, calcolata sul tuo dispositivo.",
+  "Where can I work for four hours in Milan? Ten libraries, cafés and study rooms, with filters and a page per spot. I chose the spots and built it with Lovable.": "Dove posso lavorare per quattro ore a Milano? Dieci biblioteche, caffè e sale studio, con filtri e una pagina per ogni posto. Ho scelto i posti e l'ho costruito con Lovable.",
   /* Arabic-first sites */
   "Arabic-first sites": "Siti pensati per l'arabo",
   "For small businesses whose customers read Arabic first.": "Per le piccole attività i cui clienti leggono prima in arabo.",
