@@ -266,6 +266,16 @@ a.frame-link:hover img{filter:brightness(1.04)}
 .oss-row:hover .i{transform:translate(4px,-4px)}
 @media(max-width:700px){.oss-row{grid-template-columns:1fr 24px}.oss-row h3{grid-column:1}.oss-row>div{grid-column:1}.oss-row .i{grid-row:1;grid-column:2}}
 .oss-more{margin-top:32px}
+.sites .frame{transform:none;will-change:auto;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.14),0 26px 50px -26px rgba(0,0,0,.6)}
+.sites-intro{max-width:62ch;margin-top:clamp(28px,4vw,48px)}
+.sites-grid{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(20px,2.6vw,36px);row-gap:clamp(40px,5vw,60px)}
+@media(max-width:940px){.sites-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.sites-grid{grid-template-columns:minmax(0,1fr)}}
+.site{min-width:0}
+.site h3{margin-top:20px;font-family:var(--display);font-size:clamp(22px,2vw,27px);line-height:1.1;font-weight:700;letter-spacing:-.025em;color:var(--b-ink)}
+.site p{margin-top:8px;color:var(--b-mute);font-size:15.5px;line-height:1.55}
+.site .band-links{margin-top:16px}
+.site .pill{padding:7px 14px;font-size:13.5px}
 
 .bg-grid{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(28px,5vw,72px);row-gap:clamp(28px,3.5vw,44px);align-items:start}
 @media(max-width:760px){.bg-grid{grid-template-columns:minmax(0,1fr)}}
@@ -352,6 +362,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
   <a href="#interrogami" data-name="Interrogami" aria-label="Interrogami"></a>
   <a href="#roamalone" data-name="Roam Alone" aria-label="Roam Alone"></a>
   <a href="#studyspots" data-name="Milan Study Spots" aria-label="Milan Study Spots"></a>
+  <a href="#sites" data-name="Arabic-first sites" aria-label="Arabic-first sites"></a>
 </div>
 
 <main id="top">
@@ -562,6 +573,54 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
         </div>
       </div>
     </section>
+    <section class="band sites" id="sites" data-enter="mask" style="--b-bg:#12332B;--b-ink:#F3EFE3;--b-mute:#B5C6BC;--b-acc:#F2B84B;--b-on:#1C1500;--b-w:700;--b-s:90%">
+      <div class="wrap">
+        <h2 class="band-title"><span class="line"><span>Arabic-first sites</span></span></h2>
+        <div class="sites-intro">
+          <p class="band-lead fade">For small businesses whose customers read Arabic first.</p>
+          <p class="band-body fade d1">Six bilingual sites, each with a right-to-left Arabic version and a full English one, switched with one toggle. They are demos: no real bookings are taken. I wrote the briefs and built them with Lovable.</p>
+          <p class="band-stack fade d2">React 19 · TanStack Start · Tailwind · Lovable</p>
+        </div>
+        <div class="sites-grid">
+          <article class="site fade d1">
+            <a class="frame-link" target="_blank" rel="noopener" href="https://nawaracafe.lovable.app/"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>nawaracafe.lovable.app</span></div><img src="img/nawaracafe.jpg" width="1200" height="750" alt="Nawara Café home page with a coffee cup illustration and the menu below" loading="lazy"></div></a>
+            <h3>Nawara Café</h3>
+            <p>A café menu with prices, live search, opening hours and a feedback form.</p>
+            <div class="band-links"><a class="pill main" target="_blank" rel="noopener" href="https://nawaracafe.lovable.app/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/nawaracafe">Repo</a></div>
+          </article>
+          <article class="site fade d2">
+            <a class="frame-link" target="_blank" rel="noopener" href="https://ebtesamaclinic.lovable.app/"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>ebtesamaclinic.lovable.app</span></div><img src="img/ebtesamaclinic.jpg" width="1200" height="750" alt="Ebtesama dental clinic home page with a smiling tooth illustration and service cards" loading="lazy"></div></a>
+            <h3>Ebtesama Clinic</h3>
+            <p>A dental clinic in Giza: services with starting prices and an appointment request form.</p>
+            <div class="band-links"><a class="pill main" target="_blank" rel="noopener" href="https://ebtesamaclinic.lovable.app/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/ebtesamaclinic">Repo</a></div>
+          </article>
+          <article class="site fade d3">
+            <a class="frame-link" target="_blank" rel="noopener" href="https://lamsasalon.lovable.app/"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>lamsasalon.lovable.app</span></div><img src="img/lamsasalon.jpg" width="1200" height="750" alt="Lamsa Salon home page in a magazine layout with the service list below" loading="lazy"></div></a>
+            <h3>Lamsa Salon</h3>
+            <p>A women's salon laid out like a magazine: hair, makeup, nails and skincare, with a booking flow.</p>
+            <div class="band-links"><a class="pill main" target="_blank" rel="noopener" href="https://lamsasalon.lovable.app/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/lamsasalon">Repo</a></div>
+          </article>
+          <article class="site fade d1">
+            <a class="frame-link" target="_blank" rel="noopener" href="https://elostabarber.lovable.app/"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>elostabarber.lovable.app</span></div><img src="img/elostabarber.jpg" width="1200" height="750" alt="El Osta Barber home page with a barber chair illustration on a dark background" loading="lazy"></div></a>
+            <h3>El Osta Barber</h3>
+            <p>A barbershop with its barbers, a price list, a booking flow and a loyalty stamp card.</p>
+            <div class="band-links"><a class="pill main" target="_blank" rel="noopener" href="https://elostabarber.lovable.app/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/elostabarber">Repo</a></div>
+          </article>
+          <article class="site fade d2">
+            <a class="frame-link" target="_blank" rel="noopener" href="https://yandk.lovable.app/"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>yandk.lovable.app</span></div><img src="img/yandk.jpg" width="1200" height="750" alt="Wedding invitation for Yasmine and Karim with the date and venue, and a countdown below" loading="lazy"></div></a>
+            <h3>Yasmine &amp; Karim</h3>
+            <p>A wedding invitation that opens from an envelope, with a countdown and an RSVP form.</p>
+            <div class="band-links"><a class="pill main" target="_blank" rel="noopener" href="https://yandk.lovable.app/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/yandk">Repo</a></div>
+          </article>
+          <article class="site fade d3">
+            <a class="frame-link" target="_blank" rel="noopener" href="https://bicvstudio.lovable.app/"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>bicvstudio.lovable.app</span></div><img src="img/bicvstudio.jpg" width="1200" height="750" alt="CV Studio editor with template choices on the left and a live CV preview on the right" loading="lazy"></div></a>
+            <h3>CV Studio</h3>
+            <p>A CV builder in English or Arabic: three templates, six accent colours, saved on your device, exported to PDF.</p>
+            <div class="band-links"><a class="pill main" target="_blank" rel="noopener" href="https://bicvstudio.lovable.app/">Live site<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg></a><a class="pill" target="_blank" rel="noopener" href="https://github.com/ahmedmetered/bicvstudio">Repo</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
   </div>
 
   <section class="band oss" id="oss" data-enter="mask" style="--b-bg:#0E1116;--b-ink:#E9EEF5;--b-mute:#A6B0BE;--b-acc:#5AA2FF;--b-on:#04101F;--b-w:700;--b-s:90%">
@@ -743,6 +802,23 @@ var IT = {
   "For students who need a good place to work in Milan.": "Per gli studenti che cercano un buon posto dove lavorare a Milano.",
   "Ten libraries, cafés and study rooms worth a four-hour block, with filters by type, neighborhood and traits, and a page per spot covering hours, noise level, price band and one insider tip. I wrote the brief and chose the spots, and built it with Lovable.": "Dieci biblioteche, caffè e sale studio che valgono un blocco di quattro ore, con filtri per tipo, quartiere e caratteristiche, e una pagina per ogni posto con orari, livello di rumore, fascia di prezzo e un consiglio da insider. Ho scritto il brief, scelto i posti e l'ho costruito con Lovable.",
   "Milan Study Spots home page with photos of libraries and cafés": "Home page di Milan Study Spots con foto di biblioteche e caffè",
+  /* Arabic-first sites */
+  "Arabic-first sites": "Siti pensati per l'arabo",
+  "For small businesses whose customers read Arabic first.": "Per le piccole attività i cui clienti leggono prima in arabo.",
+  "Six bilingual sites, each with a right-to-left Arabic version and a full English one, switched with one toggle. They are demos: no real bookings are taken. I wrote the briefs and built them with Lovable.": "Sei siti bilingui, ognuno con una versione araba da destra a sinistra e una completa in inglese, che si cambiano con un solo interruttore. Sono demo: non vengono prese prenotazioni reali. Ho scritto i brief e li ho costruiti con Lovable.",
+  "React 19 · TanStack Start · Tailwind · Lovable": "React 19 · TanStack Start · Tailwind · Lovable",
+  "A café menu with prices, live search, opening hours and a feedback form.": "Il menu di un caffè con prezzi, ricerca in tempo reale, orari di apertura e un modulo per i commenti.",
+  "A dental clinic in Giza: services with starting prices and an appointment request form.": "Uno studio dentistico a Giza: servizi con prezzi di partenza e un modulo per richiedere un appuntamento.",
+  "A women's salon laid out like a magazine: hair, makeup, nails and skincare, with a booking flow.": "Un salone per donne impaginato come una rivista: capelli, trucco, unghie e cura della pelle, con un percorso di prenotazione.",
+  "A barbershop with its barbers, a price list, a booking flow and a loyalty stamp card.": "Un barbiere con i suoi barbieri, un listino prezzi, un percorso di prenotazione e una tessera fedeltà a timbri.",
+  "A wedding invitation that opens from an envelope, with a countdown and an RSVP form.": "Un invito di nozze che si apre da una busta, con un conto alla rovescia e un modulo per confermare la presenza.",
+  "A CV builder in English or Arabic: three templates, six accent colours, saved on your device, exported to PDF.": "Un generatore di CV in inglese o in arabo: tre modelli, sei colori d'accento, salvataggio sul tuo dispositivo ed esportazione in PDF.",
+  "Nawara Café home page with a coffee cup illustration and the menu below": "Home page di Nawara Café con l'illustrazione di una tazza di caffè e il menu sotto",
+  "Ebtesama dental clinic home page with a smiling tooth illustration and service cards": "Home page dello studio dentistico Ebtesama con l'illustrazione di un dente sorridente e le schede dei servizi",
+  "Lamsa Salon home page in a magazine layout with the service list below": "Home page di Lamsa Salon con impaginazione da rivista e l'elenco dei servizi sotto",
+  "El Osta Barber home page with a barber chair illustration on a dark background": "Home page di El Osta Barber con l'illustrazione di una poltrona da barbiere su sfondo scuro",
+  "Wedding invitation for Yasmine and Karim with the date and venue, and a countdown below": "Invito di nozze di Yasmine e Karim con data e luogo, e sotto un conto alla rovescia",
+  "CV Studio editor with template choices on the left and a live CV preview on the right": "L'editor di CV Studio con la scelta dei modelli a sinistra e l'anteprima del CV a destra",
   /* Open source */
   "Tools I use every day, published under MIT at github.com/ahmedmetered.": "Strumenti che uso ogni giorno, pubblicati con licenza MIT su github.com/ahmedmetered.",
   "For finance teams who match Stripe payouts to bank statements by hand.": "Per i team finance che abbinano a mano i payout Stripe agli estratti conto.",
