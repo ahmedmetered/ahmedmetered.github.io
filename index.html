@@ -360,6 +360,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
 <div class="dots" id="dots" role="navigation" aria-label="Projects">
   <a href="#specwatch" data-name="SpecWatch" aria-label="SpecWatch"></a>
   <a href="#cohorta" data-name="Cohorta" aria-label="Cohorta"></a>
+  <a href="#scaffale" data-name="Scaffale" aria-label="Scaffale"></a>
   <a href="#coldbrew" data-name="Coldbrew" aria-label="Coldbrew"></a>
   <a href="#posto" data-name="Posto" aria-label="Posto"></a>
   <a href="#interrogami" data-name="Interrogami" aria-label="Interrogami"></a>
@@ -475,7 +476,24 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band" id="coldbrew" data-enter="mask" style="--b-bg:#1B1410;--b-ink:#F1E7DA;--b-mute:#C2B09C;--b-acc:#D49A5A;--b-on:#1B1410;--b-w:650;--b-s:100%">
+    <section class="band" id="scaffale" data-enter="mask" style="--b-bg:#F2F0E9;--b-ink:#16241D;--b-mute:#4C5A52;--b-acc:#1E7A4A;--b-on:#FFFFFF;--b-w:700;--b-s:90%">
+      <div class="wrap">
+        <h2 class="band-title"><span class="line"><span>Scaffale</span></span></h2>
+        <div class="band-in">
+          <div class="band-copy">
+            <p class="band-lead fade">For grocery stores where the shelves and the stock system have stopped agreeing.</p>
+            <p class="band-body fade d1">Scaffale checks shelf counts against the stock system, allowing for the sales and deliveries since the printout. Each store check becomes a report a manager can act on: accuracy, differences by product family, and likely causes. Store owners count on their phones; managers plan visits, run daily checks and full counts, and print weekly reports. I designed and built it for the grocery stores I work for in Milan, where it now runs their stock checks.</p>
+            <p class="band-stack fade d2">Next.js 15 · React 19 · TypeScript · node:sqlite · Tailwind v4 · pdf.js (reads the ERP's stock printouts) · ExcelJS · 59 automated tests</p>
+            <div class="band-links fade d3"><span class="pill quiet">private repo</span><span class="pill quiet">internal tool</span></div>
+          </div>
+          <figure class="band-shot fade d1">
+            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>Check report, demo data</span></div><img src="img/scaffale.jpg" width="1600" height="1000" alt="Scaffale's check report for a demo store: 95% accuracy, 17 of 28 products with a difference, a summary and the problems noted in the store" loading="lazy"></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="band flip" id="coldbrew" data-enter="mask" style="--b-bg:#1B1410;--b-ink:#F1E7DA;--b-mute:#C2B09C;--b-acc:#D49A5A;--b-on:#1B1410;--b-w:650;--b-s:100%">
       <div class="wrap">
         <h2 class="band-title"><span class="line"><span>Coldbrew</span></span></h2>
         <div class="band-in">
@@ -492,7 +510,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band flip" id="posto" data-enter="bounce" style="--b-bg:#2B35FF;--b-ink:#FFFFFF;--b-mute:#D2D5FF;--b-acc:#FFD400;--b-on:#14143A;--b-w:800;--b-s:100%">
+    <section class="band" id="posto" data-enter="bounce" style="--b-bg:#2B35FF;--b-ink:#FFFFFF;--b-mute:#D2D5FF;--b-acc:#FFD400;--b-on:#14143A;--b-w:800;--b-s:100%">
       <div class="wrap">
         <h2 class="band-title"><span>Posto</span></h2>
         <div class="band-in">
@@ -509,7 +527,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band" id="interrogami" data-enter="bounce" style="--b-bg:#BFE6FB;--b-ink:#10304A;--b-mute:#33566F;--b-acc:#58CC02;--b-on:#0B2A00;--b-w:800;--b-s:100%">
+    <section class="band flip" id="interrogami" data-enter="bounce" style="--b-bg:#BFE6FB;--b-ink:#10304A;--b-mute:#33566F;--b-acc:#58CC02;--b-on:#0B2A00;--b-w:800;--b-s:100%">
       <div class="wrap">
         <h2 class="band-title"><span>Interrogami</span></h2>
         <div class="band-in">
@@ -526,7 +544,7 @@ footer{--f-bg:var(--ink);--f-ink:var(--bg);margin-top:clamp(72px,9vw,120px);back
       </div>
     </section>
 
-    <section class="band flip" id="roamalone" data-enter="words" style="--b-bg:#F6F1E6;--b-ink:#1F1A12;--b-mute:#5C5444;--b-acc:#B5481F;--b-on:#FFF7EE;--b-w:780;--b-s:90%">
+    <section class="band" id="roamalone" data-enter="words" style="--b-bg:#F6F1E6;--b-ink:#1F1A12;--b-mute:#5C5444;--b-acc:#B5481F;--b-on:#FFF7EE;--b-w:780;--b-s:90%">
       <div class="wrap">
         <h2 class="band-title"><span class="w" style="--w:0"><span>Roam</span></span> <span class="w" style="--w:1"><span>Alone</span></span></h2>
         <div class="band-in">
@@ -769,6 +787,13 @@ var IT = {
   "private repo": "repo privato",
   "Cohorta landing page": "Landing page di Cohorta",
   "Cohorta's feature list, twelve cards from the sales pipeline and instalments to payroll and performance reviews": "L'elenco delle funzioni di Cohorta, dodici schede dalla pipeline di vendita e dalle rate fino a buste paga e valutazioni delle prestazioni",
+  /* Scaffale */
+  "For grocery stores where the shelves and the stock system have stopped agreeing.": "Per i negozi alimentari dove gli scaffali e il gestionale hanno smesso di andare d'accordo.",
+  "Scaffale checks shelf counts against the stock system, allowing for the sales and deliveries since the printout. Each store check becomes a report a manager can act on: accuracy, differences by product family, and likely causes. Store owners count on their phones; managers plan visits, run daily checks and full counts, and print weekly reports. I designed and built it for the grocery stores I work for in Milan, where it now runs their stock checks.": "Scaffale confronta i conteggi a scaffale con il gestionale, tenendo conto delle vendite e delle consegne dopo la stampa. Ogni controllo diventa un report su cui un responsabile può agire: accuratezza, differenze per famiglia di prodotto e cause probabili. I titolari contano dal telefono; i responsabili pianificano le visite, fanno i controlli giornalieri e gli inventari completi e stampano i report settimanali. L'ho progettato e costruito per i negozi alimentari per cui lavoro a Milano, dove ora gestisce i controlli di magazzino.",
+  "Next.js 15 · React 19 · TypeScript · node:sqlite · Tailwind v4 · pdf.js (reads the ERP's stock printouts) · ExcelJS · 59 automated tests": "Next.js 15 · React 19 · TypeScript · node:sqlite · Tailwind v4 · pdf.js (legge le stampe giacenze del gestionale) · ExcelJS · 59 test automatici",
+  "internal tool": "strumento interno",
+  "Check report, demo data": "Report di controllo, dati dimostrativi",
+  "Scaffale's check report for a demo store: 95% accuracy, 17 of 28 products with a difference, a summary and the problems noted in the store": "Il report di controllo di Scaffale per un negozio dimostrativo: accuratezza del 95%, 17 prodotti su 28 con una differenza, un riepilogo e i problemi notati in negozio",
   /* Coldbrew */
   "For people who sell to local businesses and want every message to be a good one.": "Per chi vende ad attività locali e vuole che ogni messaggio sia un buon messaggio.",
   "Coldbrew finds and ranks the businesses in a city, then holds every draft for your approval: a linter checks that each message is short, specific and honest. It reads the replies, charts what works, and never sends anything itself. It also helps draft the messages. I designed it, built it and tested it end to end.": "Coldbrew trova e classifica le attività di una città, poi tiene ogni bozza in attesa della tua approvazione: un linter controlla che ogni messaggio sia breve, specifico e onesto. Legge le risposte, mostra cosa funziona e non invia mai nulla da solo. Aiuta anche a scrivere i messaggi. L'ho progettato, costruito e testato end to end.",
